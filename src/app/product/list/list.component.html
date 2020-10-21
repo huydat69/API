@@ -1,0 +1,191 @@
+<!-- Start Bradcaump area -->
+<div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url(./assets/images/bg/2.jpg) no-repeat scroll center center / cover ;">
+    <div class="ht__bradcaump__wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="bradcaump__inner text-center">
+                        <h2 class="bradcaump-title">Thanh bên</h2>
+                        <nav class="bradcaump-inner">
+                          <a class="breadcrumb-item" href="index.html">Trang chủ</a>
+                          <span class="brd-separetor">/</span>
+                          <span class="breadcrumb-item active">Mua thanh bên</span>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- Start Our ShopSide Area -->
+        <section class="htc__shop__sidebar bg__white ptb--120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+                        <div class="htc__shop__left__sidebar">
+                            <!-- Start Range -->
+                            <div class="htc-grid-range">
+                                <h4 class="section-title-4">BỘ LỌC THEO GIÁ</h4>
+                                <div class="content-shopby">
+                                    <div class="price_filter s-filter clear">
+                                        <form action="#" method="GET">
+                                            <div id="slider-range"></div>
+                                            <div class="slider__range--output">
+                                                <div class="price__output--wrap">
+                                                    <div class="price--output">
+                                                        <span>Giá :</span><input type="text" id="amount" readonly>
+                                                    </div>
+                                                    <div class="price--filter">
+                                                        <a href="#">Bộ lọc</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Range -->
+                            <!-- Start Product Cat -->
+                            <div class="htc__shop__cat">
+                                <h4 class="section-title-4">Thương hiệu</h4>
+                                <ul class="sidebar__list">
+                                    <li><a href="#">Adidas</a></li>
+                                    <li><a href="#">Nike </a></li>
+                                    <li><a href="#">Converse </a></li>
+                                </ul>
+                            </div>
+                            <!-- End Product Cat -->
+                            <!-- Start Color Cat -->
+                            <div class="htc__shop__cat">
+                                <h4 class="section-title-4">Chọn màu</h4>
+                                <ul class="sidebar__list">
+                                    <li class="black"><a href="#"><i class="zmdi zmdi-circle"></i>đen</a></li>
+                                    <li class="blue"><a href="#"><i class="zmdi zmdi-circle"></i>xanh </a></li>
+                                    <li class="brown"><a href="#"><i class="zmdi zmdi-circle"></i>nâu </a></li>
+                                    <li class="red"><a href="#"><i class="zmdi zmdi-circle"></i>đỏ </a></li>
+                                    <li class="orange"><a href="#"><i class="zmdi zmdi-circle"></i>vàng </a></li>
+                                </ul>
+                            </div>
+                            <!-- End Color Cat -->
+                            <!-- Start Size Cat -->
+                            <div class="htc__shop__cat">
+                                <h4 class="section-title-4">Danh mục sản phẩm</h4>
+                                <ul class="sidebar__list">
+                                    <li><a href="#">Nam</a></li>
+                                    <li><a href="#">Nữ </a></li>
+                                </ul>
+                            </div>
+                            <!-- End Size Cat -->
+                            <!-- Start Tag Area -->
+                            <div class="htc__shop__cat">
+                                <h4 class="section-title-4">Thể loại</h4>
+                                <ul class="htc__tags">
+                                    <li><a href="#">Tất cả</a></li>
+                                    <li><a href="#">quần áo</a></li>
+                                    <li><a href="#">phụ kiện</a></li>
+                                    <li><a href="#">Thiết bị</a></li>
+                                </ul>
+                            </div>
+                            <!-- End Tag Area -->
+                        </div>
+                    </div>
+                    <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12 smt-30">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                                <div class="producy__view__container">
+                                    <!-- Start Short Form -->
+                                    <div class="product__list__option">
+                                        <div class="order-single-btn">
+                                            <select class="select-color selectpicker">
+                                              <option>Sắp xếp</option>
+                                              <option>Mới</option>
+                                              <option>giá</option>
+                                              <option>bán chạy</option>
+                                            </select>
+                                        </div>
+                                        <div class="shp__pro__show">
+                                            <span>Hiển thị 1-4 trên 25 kết quả</span>
+                                        </div>
+                                    </div>
+                                    <!-- End Short Form -->
+                                    <!-- Start List And Grid View -->
+                                    <ul class="view__mode" role="tablist">
+                                        <li role="presentation" class="grid-view active"><a href="#grid-view" role="tab" data-toggle="tab"><i class="zmdi zmdi-grid"></i></a></li>
+                                        <li role="presentation" class="list-view"><a href="#list-view" role="tab" data-toggle="tab"><i class="zmdi zmdi-view-list"></i></a></li>
+                                    </ul>
+                                    <!-- End List And Grid View -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="shop__grid__view__wrap">
+                                <!-- Start Single View -->
+                                <div role="tabpanel" id="grid-view"  class="single-grid-view tab-pane fade in active clearfix">
+                                    <!-- Start Single Product -->
+                                    <div class="col-md-3 col-lg-4 col-sm-4 col-xs-12" *ngFor="let item of products" >
+                                        <div class="product">
+                                            <div class="product__inner">
+                                                <div class="pro__thumb">
+                                                    <a routerLink = "chitiet/{{item.productId}}">
+                                                        <img src="./assets/images/product/{{item.productImage}}" alt="product images">
+                                                    </a>
+                                                </div>
+                                                <div class="product__hover__info">
+                                                    <ul class="product__action">
+                                                        <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" routerLink = "chitiet/{{item.productId}}"><span class="ti-plus"></span></a></li>
+                                                        <li><a title="Add To Cart"  (click)="add_cart(item)"><span class="ti-shopping-cart"></span></a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="add__to__wishlist">
+                                                    <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
+                                                </div>
+                                            </div>
+                                            <div class="product__details">
+                                                <h2><a href="product-details.html">{{item.productName}}</a></h2>
+                                                <ul class="product__price">
+                                                    <li class="old__price">700000.VNĐ</li>
+                                                    <li class="new__price">{{item.productPrice}}.VNĐ</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                                <!-- End Single View -->
+                                <!-- Start Single View -->
+                                <div  role="tabpanel" id="list-view" class="single-grid-view tab-pane fade clearfix">
+                                    <!-- Start List Content-->
+                                    <div class="single__list__content clearfix" *ngFor="let item of products">
+                                        <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+                                            <div class="list__thumb">
+                                                <a routerLink = "chitiet/{{item.productId}}">
+                                                    <img src="./assets/images/products/{{item.productImage}}" alt="list images">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9 col-lg-9 col-sm-8 col-xs-12">
+                                            <div class="list__details__inner">
+                                                <h2><a routerLink = "chitiet/{{item.productId}}">{{item.productName}}</a></h2>
+                                                <p>{{item.productDesc}}</p>
+                                                <span class="product__price">{{item.productPrice}}.VNĐ</span>
+                                                <div class="shop__btn">
+                                                    <a class="htc__btn" href="cart.html"><span class="ti-shopping-cart"></span>Add to Cart</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End List Content-->
+                                    <!-- Start List Content-->
+                                    
+                                    <!-- End List Content-->
+                                </div>
+                                <!-- End Single View -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+ <!-- End Our ShopSide Area -->
+
+

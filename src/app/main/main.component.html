@@ -1,0 +1,93 @@
+
+<div class="slider__container slider--one">
+    <div class="slider__activation__wrap owl-carousel owl-theme">
+        <!-- Start Single Slide -->
+        <div class="slide slider__full--screen" style="background: rgba(0, 0, 0, 0) url(./assets/images/slider/bg/1.png) no-repeat scroll center center / cover ;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-4 col-sm-12 col-xs-12">
+                        <div class="slider__inner">
+                            <h1> <span class="text--theme">Bộ sưu tập mới</span></h1>
+                            <div class="slider__btn">
+                                <a class="htc__btn" href="cart.html">mua sắm ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Single Slide -->
+        <!-- Start Single Slide -->
+        <div class="slide slider__full--screen" style="background: rgba(0, 0, 0, 0) url(./assets/images/slider/bg/2.png) no-repeat scroll center center / cover ;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
+                        <div class="slider__inner">
+                            <h1>SảN phẩm mới <span class="text--theme"></span></h1>
+                            <div class="slider__btn">
+                                <a class="htc__btn" href="cart.html">mua sắm ngay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Single Slide -->
+    </div>
+</div>
+     <!-- Start Slider Area -->
+     <!-- Start Our Product Area -->
+<section class="htc__product__area ptb--130 bg__white">
+    <div class="container">
+        <div class="htc__product__container">
+            <!-- Start Product MEnu -->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="product__menu">
+                        <button data-filter="*" class="is-checked">Tất cả</button>
+                        <button data-filter=".cat--1">Sản phẩm bán chạy</button>
+                        <button data-filter=".cat--2">Sản phẩm mới</button>
+                        <button data-filter=".cat--4">phụ kiện</button>
+                    </div>
+                </div>
+            </div>
+            <!-- End Product MEnu -->
+            <div class="row">
+                <div class="product__list"  > 
+                    <!-- Start Single Product -->
+                    <div class="col-md-3 single__pro col-lg-3 cat--1 col-sm-4 col-xs-12" *ngFor="let item of products">
+                        <div class="product foo">
+                            <div class="product__inner">
+                                <div class="pro__thumb">
+                                    <a routeLink = "/product/chitiet/{{item.productId}}">
+                                        <img src="./assets/images/product/{{item.productImage}}" alt="product images">
+                                    </a>
+                                </div>
+                                <div class="product__hover__info">
+                                    <ul class="product__action">
+                                        <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" routerLink="/product/chitiet/{{item.productId}}"><span class="ti-plus"></span></a></li>
+                                        <li><a title="Add TO Cart" href="#"(click)="add_cart(item)"><span class="ti-shopping-cart"></span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="add__to__wishlist">
+                                    <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
+                                </div>
+                            </div>
+                            <div class="product__details">
+                                <h2><a routerLink="/product/chitiet/1" href="/product/chitiet/1">{{item.productName}}</a></h2>
+                                <ul class="product__price">
+                                    <li class="old__price">$10.00</li>
+                                    <li class="new__price">{{item.productPrice}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                   
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Our Product Area -->
+<!-- Start Footer Area -->

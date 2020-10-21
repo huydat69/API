@@ -1,0 +1,102 @@
+ <!-- End Offset Wrapper -->
+        <!-- Start Bradcaump area -->
+        <div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url(images/bg/2.jpg) no-repeat scroll center center / cover ;">
+            <div class="ht__bradcaump__wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="bradcaump__inner text-center">
+                                <h2 class="bradcaump-title">Cart</h2>
+                                <nav class="bradcaump-inner">
+                                  <a class="breadcrumb-item" href="index.html">Home</a>
+                                  <span class="brd-separetor">/</span>
+                                  <span class="breadcrumb-item active">Cart</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Bradcaump area -->
+        <!-- cart-main-area start -->
+          <!-- End Bradcaump area -->
+        <!-- cart-main-area start -->
+        <div class="cart-main-area ptb--120 bg__white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <form action="#">               
+                            <div class="table-content table-responsive">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th class="product-thumbnail">Hình ảnh</th>
+                                            <th class="product-name">Sản phẩm</th>
+                                            <th class="product-price">Giá</th>
+                                            <th class="product-quantity">Số lượng</th>
+                                            <th class="product-subtotal">Tổng tiền</th>
+                                            <th class="product-remove">Xoá</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                       <ng-container *ngFor="let sp of items">
+                                        <tr>
+                                            <td class="product-thumbnail"><a href="#"><img src="./assets/images/product/{{sp.productImage}}" alt="product img" /></a></td>
+                                            <td class="product-name">{{sp.productName}}</td>
+                                            <td class="product-price"><span class="amount">{{sp.productPrice| currency : "VND"}}</span></td>
+                                            <td class="product-quantity"><div class="control">
+                                                <input type="text"
+                                                        #soluong   (change)="addQty(sp,soluong.value)" title="Qty" [value]="sp.quantity" class="input-qty input-text qty text">
+                                            </div></td>
+                                            <td class="product-subtotal"> <strong><span
+                                                class="kreen-Price-amount amount"><span
+                                                class="kreen-Price-currencySymbol"></span>{{sp.money| currency : "VND"}}</span></strong></td>
+                                            <td class="product-remove"><a href="javascript:void(0)" (click)="deleteCart(sp.productId)"
+                                                class="remove" aria-label="Remove this item" data-product_id="27"
+                                                data-product_sku="885B712">×</a></td>
+                                        </tr>
+                                    </ng-container>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8 col-sm-7 col-xs-12">
+                                    <div class="buttons-cart">
+                                        <a href="#">Tiếp tục mua sắm</a>
+                                    </div>
+                                    <div class="coupon">
+                                        <h3>Phiếu giảm giá</h3>
+                                        <p>Nhập mã phiếu giảm giá của bạn nếu bạn có.</p>
+                                        <input type="text" placeholder="Mã giảm giá" />
+                                        <input type="submit" value="Áp dụng phiếu giảm giá" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-5 col-xs-12">
+                                    <div class="cart_totals">
+                                        <h2>Cart Totals</h2>
+                                        <table>
+                                            <tbody>
+                                                
+                                    
+                                                <tr class="order-total">
+                                                    <th>Tổng tiền</th>
+                                                    <td>
+                                                        <strong><span class="amount">{{total|currency : "VND"}}</span></strong>
+                                                    </td>
+                                                </tr>                                           
+                                            </tbody>
+                                        </table>
+                                        <div class="wc-proceed-to-checkout">
+                                            <a href="checkout.html">Tiến hành thanh toán</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- cart-main-area end -->
+        <!-- Start Footer Area -->
